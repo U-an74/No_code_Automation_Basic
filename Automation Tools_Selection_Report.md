@@ -58,30 +58,28 @@
 ## 4. 실행 결과
 
 - **Make** 🟠
-   - Make/Workflow 구성 화면     
+  - Workflow 구성 화면     
   <img width="1252" height="666" alt="make_workflow" src="https://github.com/user-attachments/assets/608e108e-57b4-490d-8920-38d696e592bd" />
 
-   - Make/실행 화면  
+  - 실행 화면  
   <img width="1692" height="782" alt="make_요청접수" src="https://github.com/user-attachments/assets/f29d4ff3-57f7-4eb4-9f6c-887a8988890d" /> [Make/Trigger/Watch new rows/Google Sheets]
     
   <img width="1682" height="781" alt="make_discord" src="https://github.com/user-attachments/assets/18597507-8020-4374-9c05-c819999732f3" /> [Make/Action1/Send a message/Discord]
 
   <img width="1796" height="806" alt="make_처리로그" src="https://github.com/user-attachments/assets/588e3671-8487-49e8-b12a-f9115abda4fd" /> [Make/Action2&3/Add a row/Google Sheets]
-
-    - 실행 방법 : 시나리오 저장 → activate(15분마다 자동 실행) → 신규 행 추가
-    - 실행 결과 :  신규 행을 정상 감지하였고, 우선순위 분기에 따라 모든 작업이 설계 의도대로 수행됨.
+  - 실행 방법 : 시나리오 저장 → activate(15분마다 자동 실행) → 신규 행 추가
+  - 실행 결과 :  신규 행을 정상 감지하였고, 우선순위 분기에 따라 모든 작업이 설계 의도대로 수행됨. 
     (우선순위 높음/보통/낮음 3개 케이스 all 검증 완료)
-    - 이슈 : Trigger 기준점 설정
-        - activate 모드 실행 전에, 새 행을 추가하는 경우 동작하지 않는 상황 발생 
-        → ex) 새 행 추가(A7) - Activate - 새 행 추가(A8) = A7 처리 누락
-        - 편집 모드에서 수동으로 시작점을 지정해서 test를 실행하고 save한 뒤, Trigger 시트를 정리하고 같은 데이터를 재사용하는 경우, activate 모드 실행 시 동작하지 않는 상황 발생 → [Choose Where to start] 값을 다시 설정하면 정상 동작함을 확인함.
+  - 이슈 : Trigger 기준점 설정
+    - activate 모드 실행 전에, 새 행을 추가하는 경우 동작하지 않는 상황 발생 → ex) 새 행 추가(A7) - Activate - 새 행 추가(A8) = A7 처리 누락
+    - 편집 모드에서 수동으로 시작점을 지정해서 test를 실행하고 save한 뒤, Trigger 시트를 정리하고 같은 데이터를 재사용하는 경우, activate 모드 실행 시 동작하지 않는 상황 발생 → [Choose Where to start] 값을 다시 설정하면 정상 동작함을 확인함.
 
             
 - **Zapier** 🟢
-   - Zapier/Workflow 구성 화면 
+    - Workflow 구성 화면 
     <img width="749" height="709" alt="자피어_워크플로우" src="https://github.com/user-attachments/assets/04eeb99d-a99f-4134-aa3c-eb6622c92924" /> 
    
-   - Zapier/실행 화면
+    - 실행 화면
     <img width="1350" height="840" alt="zapier_요청접수" src="https://github.com/user-attachments/assets/dd6a29d6-dbf2-4b6f-846e-522450fc50cc" /> [Zapier/Trigger/New Spreadsheet row/Google Sheets]
 
     <img width="1077" height="712" alt="image" src="https://github.com/user-attachments/assets/7badd399-92ac-41c0-855d-11805f3d5d07" /> [Zapier/Action1/Send Channel message/Discord]
