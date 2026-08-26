@@ -36,9 +36,6 @@
 - **[Filter/Router]** 업무 요청의 **우선순위 값**을 기준으로 분기
 - 경로.1 우선순위가 **높음**인 경우
     
-    > 
-    > 
-    > 
     > **[Action 1]** Discord로 즉시 접수 알림 전송
     
     > **[Action 2]** 요청 내용을 처리 로그 시트에 기록
@@ -61,9 +58,10 @@
 ## 4. 실행 결과
 
 - **Make** 🟠
-    
-  <img width="1252" height="666" alt="make_workflow" src="https://github.com/user-attachments/assets/608e108e-57b4-490d-8920-38d696e592bd" /> [Make/Workflow 구성 화면]
-    
+   - Make/Workflow 구성 화면     
+  <img width="1252" height="666" alt="make_workflow" src="https://github.com/user-attachments/assets/608e108e-57b4-490d-8920-38d696e592bd" />
+
+   - Make/실행 화면  
   <img width="1692" height="782" alt="make_요청접수" src="https://github.com/user-attachments/assets/f29d4ff3-57f7-4eb4-9f6c-887a8988890d" /> [Make/Trigger/Watch new rows/Google Sheets]
     
   <img width="1682" height="781" alt="make_discord" src="https://github.com/user-attachments/assets/18597507-8020-4374-9c05-c819999732f3" /> [Make/Action1/Send a message/Discord]
@@ -80,13 +78,13 @@
 
             
 - **Zapier** 🟢
-    
-    <img width="749" height="709" alt="자피어_워크플로우" src="https://github.com/user-attachments/assets/04eeb99d-a99f-4134-aa3c-eb6622c92924" /> [Zapier/Workflow 구성 화면]
-    <img width="1077" height="712" alt="image" src="https://github.com/user-attachments/assets/7badd399-92ac-41c0-855d-11805f3d5d07" />
-
+   - Zapier/Workflow 구성 화면 
+    <img width="749" height="709" alt="자피어_워크플로우" src="https://github.com/user-attachments/assets/04eeb99d-a99f-4134-aa3c-eb6622c92924" /> 
+   
+   - Zapier/실행 화면
     <img width="1350" height="840" alt="zapier_요청접수" src="https://github.com/user-attachments/assets/dd6a29d6-dbf2-4b6f-846e-522450fc50cc" /> [Zapier/Trigger/New Spreadsheet row/Google Sheets]
 
-     <img width="1077" height="712" alt="image" src="https://github.com/user-attachments/assets/7badd399-92ac-41c0-855d-11805f3d5d07" /> [Zapier/Action1/Send Channel message/Discord]
+    <img width="1077" height="712" alt="image" src="https://github.com/user-attachments/assets/7badd399-92ac-41c0-855d-11805f3d5d07" /> [Zapier/Action1/Send Channel message/Discord]
     
     <img width="1710" height="842" alt="zapier_처리로그" src="https://github.com/user-attachments/assets/882b3624-3d95-407c-9245-8485c780f316" /> [Zapier/Action2&3/Create spreadsheet row/Google Sheets]  
     
