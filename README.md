@@ -1,5 +1,5 @@
 # No_code_Automation_Basic
-Creating workflow
+Creating workflow *No secrets included*
 ## 1. 프로젝트 1 자동화 도구 비교 구현
 📁 보고서 :  [자동화 도구 비교분석 보고서](https://exuberant-cuckoo-0b8.notion.site/3c1631db7fe080d7ace0eb0d252683b0)
 
