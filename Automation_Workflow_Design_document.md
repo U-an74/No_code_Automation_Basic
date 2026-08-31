@@ -36,64 +36,47 @@
 → 처리 可否 판단 규칙: 홀 버를 포함하면 처리 불가
 - 경로.1 홀 버 불량 **포함**인 경우
     
-    > 
-    > 
-    > 
     > **[Action 1]** <처리 **불가** 불량> 시트에 기록(1차 분류)
-    > **[Action 2]** 자동 분류 완료 일시 정보를 <Raw data> 시트에 업데이트
-    > 
+    > **[Action 2]** 자동 분류 완료 일시 정보를 <Raw data> 시트에 업데이트 
+    
 - 경로.2 홀 버 불량 **미포함**인 경우
     
-    > 
-    > 
-    > 
     > **[Action 1]** <처리 **가능** 불량> 시트에 기록(1차 분류)
-    > **[Action 2]** 자동 분류 완료 일시 정보를 <Raw data> 시트에 업데이트
-    > **[Filter] 타흔/홀 메카스 불량만 필터링, 다음 단계로**
-    > **[Action 3]** <선별 일지> 시트에 기록(2차 분류) 및 담당 자동 배정
-    > → 배정 규칙: {{if(2.`1` = "타흔"; "현장 작업자"; if(2.`1` = "홀 메카스"; "사무직"; ""))}}
     > 
+    > **[Action 2]** 자동 분류 완료 일시 정보를 <Raw data> 시트에 업데이트
+    > 
+    > **[Filter] 타흔/홀 메카스 불량만 필터링, 다음 단계로**
+    > 
+    > **[Action 3]** <선별 일지> 시트에 기록(2차 분류) 및 담당 자동 배정
+    > 
+    > → 배정 규칙: {{if(2.`1` = "타흔"; "현장 작업자"; if(2.`1` = "홀 메카스"; "사무직"; ""))}}
+
 - 경로.3 불량 유형 입력 누락인 경우(error handler)
     
-    > 
-    > 
-    > 
     > **[Action 4]** 자동 분류 실패 정보를 Discord 알림 메세지로 발송
-    > **[Action 2]** 자동 분류 실패 정보를 <Raw data> 시트에 업데이트
     > 
+    > **[Action 2]** 자동 분류 실패 정보를 <Raw data> 시트에 업데이트
+    
 </aside>
 
 ## 4. 구현 결과
 
 - 구현 화면
 
-![image.png](image.png)
+<img width="1332" height="736" alt="image" src="https://github.com/user-attachments/assets/8dc18777-efcd-494f-8c98-daee54ff6b09" /> [Make/Workflow 구성 화면]
+
 
 - 실행 결과 화면
     - 실행 방법 : 시나리오 저장 → activate(15분마다 자동 실행) → 신규 행 추가
-    - 실행 결과 :  신규 행을 정상 감지하였고, 불량 유형 분기에 따라 모든 작업이 설계 의도대로 수행됨. 
-    (경로 1/2/2 3개 케이스 all 검증 완료)
+    - 결과 요약 :  신규 행을 정상 감지하였고, 불량 유형 분기와 필터에 따라 모든 작업이 설계 의도대로 수행됨.
+<img width="1426" height="843" alt="test_data_" src="https://github.com/user-attachments/assets/73c6e469-34af-4521-aa40-469708ffef1e" /> [경로 1/2/3 총 12번 검증 test 기록 - all pass]
 
-![경로 1/2/3 총 12번 검증 test 기록 - all pass](test_data_.png)
+<img width="1370" height="849" alt="image 1" src="https://github.com/user-attachments/assets/d30e1f67-4186-4bb9-a9b8-d1ceda982b68" /> [trigger] watch new rows - 신규 행(불량 내용) 감지 / [Action 2] update a row - 자동 분류 완료 일시 기록 
 
-경로 1/2/3 총 12번 검증 test 기록 - all pass
+<img width="1440" height="817" alt="스크린샷_2026-08-31_112801" src="https://github.com/user-attachments/assets/803990bb-49e2-4f84-b2ef-282b7bc3ba43" />[Action 1] add a row - 1차 불량 분류(처리 불가)
 
-![[trigger] watch new rows - 신규 행(불량 내용) 감지 / [Action 2] update a row - 자동 분류 완료 일시 기록 ](image%201.png)
+<img width="1452" height="811" alt="image 2" src="https://github.com/user-attachments/assets/d287d8aa-25d1-4d6c-8311-1110f8c08d3f" /> [Action 1] add a row - 1차 불량 분류(처리 가능)
 
-[trigger] watch new rows - 신규 행(불량 내용) 감지 / [Action 2] update a row - 자동 분류 완료 일시 기록 
+<img width="1399" height="847" alt="image 3" src="https://github.com/user-attachments/assets/856482f6-f211-4fe8-bae7-29eba4372793" /> [Action 3] add a row - 2차 불량 분류(처리 가능 불량 중 선별 가능) 및 자동 담당 배정
 
-![[Action 1] add a row - 1차 불량 분류(처리 불가)](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-08-31_112801.png)
-
-[Action 1] add a row - 1차 불량 분류(처리 불가)
-
-![[Action 1] add a row - 1차 불량 분류(처리 가능)](image%202.png)
-
-[Action 1] add a row - 1차 불량 분류(처리 가능)
-
-![[Action 3] add a row - 2차 불량 분류(처리 가능 불량 중 선별 가능) 및 자동 담당 배정](image%203.png)
-
-[Action 3] add a row - 2차 불량 분류(처리 가능 불량 중 선별 가능) 및 자동 담당 배정
-
-![[Action 4] send a message - 자동 분류 실패 정보 알림](image%204.png)
-
-[Action 4] send a message - 자동 분류 실패 정보 알림
+<img width="962" height="707" alt="image 4" src="https://github.com/user-attachments/assets/308ccba2-215a-4eb9-8ec4-cd75311b3c01" /> [Action 4] send a message - 자동 분류 실패 정보 알림
