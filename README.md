@@ -5,7 +5,7 @@ Creating workflow
 
 💻 시나리오 by make🟠 (https://us2.make.com/public/shared-scenario/rf1g5b4KJHe/make-test-project1)
 
-💻 시나리오 by Zapier🟢 (https://zapier.com/editor/377417015/published)
+💻 시나리오 by Zapier🟢 (https://zapier.com/templates/details/zapiertestproject1-aaa940)
 
 ## 2. 프로젝트 2 자유 주제 자동화 설계 및 구현
 📁 설계문서 : [자동화 워크플로우 설계문서](https://exuberant-cuckoo-0b8.notion.site/3c7631db7fe080ad8a66c44024b09033)
