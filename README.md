@@ -13,9 +13,9 @@ Creating workflow
 💻 시나리오 by make🟠 : https://us2.make.com/public/shared-scenario/A38wsU6uvam/make-test-project2
 
 ## 3. 부록
-☑️ base 구글 시트1 링크 : [품질팀 협업 과제표](https://docs.google.com/spreadsheets/d/1yPrbchpe5-7VqZbGRWki8yi2S8u1GFqxhm-XaqmLAEc/edit?gid=0#gid=0)
+☑️ base 구글 시트1 링크 : [품질팀 협업 과제표](https://docs.google.com/spreadsheets/d/1P5MyHgVomAyznGeaQpu-ue5Jv0P0STrL3auN9TYtZxg/edit?gid=1160935727#gid=1160935727)
 
-☑️ base 구글 시트2 링크 : [실시간 불량 발생 현황 관리](https://docs.google.com/spreadsheets/d/1P5MyHgVomAyznGeaQpu-ue5Jv0P0STrL3auN9TYtZxg/edit?gid=1160935727#gid=1160935727)
+☑️ base 구글 시트2 링크 : [실시간 불량 발생 현황 관리](https://docs.google.com/spreadsheets/d/1yPrbchpe5-7VqZbGRWki8yi2S8u1GFqxhm-XaqmLAEc/edit?gid=0#gid=0)
 
 ## 4. 🔒 보안 점검
 
